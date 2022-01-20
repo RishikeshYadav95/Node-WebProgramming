@@ -1,0 +1,277 @@
+<div class="sidenav">
+  <div class="login-main-text">
+    <h1>Sign-up</h1>
+    <p>Register your details and get access to re$ale</p>
+  </div>
+</div>
+<div class="main">
+  {{>navbar}}
+  <div class="col-md-12 col-sm-12">
+    <div class="add-product-form">
+      <form
+        id="create-user"
+        action="/users/add"
+        method="post"
+        class="form-horizontal needs-validation"
+        novalidate
+      >
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="firstName">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter first name"
+            id="firstName"
+            name="firstName"
+            oninput="removeErrorClass(this)"
+            required
+          />
+          <div class="invalid-feedback" id="invalid-firstName-label">
+            First name cannot be empty
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="lastName">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter last name"
+            id="lastName"
+            name="lastName"
+            oninput="removeErrorClass(this)"
+            required
+          />
+          <div id="invalid-lastName-label" class="invalid-feedback">
+            Last name cannot be empty
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="userName">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter username"
+            id="userName"
+            name="userName"
+            oninput="removeErrorClass(this)"
+            required
+          />
+          <div class="invalid-feedback" id="invalid-username-label">
+            Username cannot be empty
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="password">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Enter password"
+            id="password"
+            name="password"
+            oninput="removeErrorClass(this)"
+            required
+          />
+          <div id="invalid-password-label" class="invalid-feedback">
+            Password cannot be empty
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="imageUpload">Profile Image</label>
+          <input
+            id="imageUpload"
+            name="imageUpload"
+            accept="image/*"
+            class="form-control"
+            type="file"
+          />
+          <div class="invalid-feedback" id="invalid-imageUpload-label">
+            Please select an image
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="biography">Biography</label>
+          <textarea
+            class="form-control"
+            id="biography"
+            name="biography"
+            placeholder="Describe yourself"
+            oninput="removeErrorClass(this)"
+            required
+          ></textarea>
+          <div class="invalid-feedback" id="invalid-biography-label">
+            Description cannot be empty
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="dob">Date of Birth</label>
+          <input
+            type="date"
+            class="form-control"
+            id="dob"
+            name="dob"
+            oninput="removeErrorClass(this)"
+            required
+          />
+          <div class="invalid-feedback" id="invalid-dob-label">
+            Date of Birth cannot be empty
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="email">Email Id</label>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Enter email address"
+            id="email"
+            name="email"
+            oninput="removeErrorClass(this)"
+            required
+          />
+          <div class="invalid-feedback" id="invalid-email-label">
+            Email Id cannot be empty
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="phoneNumber">Phone Number</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter phone number"
+            id="phoneNumber"
+            name="phoneNumber"
+            oninput="removeErrorClass(this)"
+            maxlength="12"
+            minlength="12"
+            required
+          />
+          <div class="invalid-feedback" id="invalid-phoneNumber-label">
+            Phone number cannot be empty
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="span-gender">Gender</span>
+          <div class="form-control">
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                value="male"
+                id="gender_male"
+              />
+              <label class="form-check-label" for="gender_male">
+                Male
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                value="female"
+                id="gender_female"
+              />
+              <label class="form-check-label" for="gender_female">
+                Female
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                value="other"
+                id="gender_other"
+                checked
+              />
+              <label class="form-check-label" for="gender_other">
+                Other
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="street">Address</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter street address"
+            id="street"
+            name="street"
+            oninput="removeErrorClass(this)"
+            required
+          />
+          <div class="invalid-feedback" id="invalid-street-label">
+            Please enter street details
+            <address></address>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="city">City</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter city"
+            id="city"
+            name="city"
+            oninput="removeErrorClass(this)"
+            required
+          />
+          <label class="input-group-text" for="state">State</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter state (Eg: NY, NJ)"
+            id="state"
+            name="state"
+            aria-label="state"
+            maxlength="2"
+            oninput="removeErrorClass(this)"
+            required
+          />
+          <label class="input-group-text" for="zip">Zip</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Zip code"
+            id="zip"
+            name="zip"
+            aria-label="zip"
+            pattern="[0-9]{5}"
+            oninput="removeErrorClass(this)"
+            maxlength="5"
+            required
+          />
+          <div class="invalid-feedback" id="invalid-address-label">
+            Address field(s) cannot be empty or invalid
+          </div>
+        </div>
+        <div id="error-div" class="alert alert-danger" role="alert">
+          Make sure all inputs meet the requirements
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Sign-up</button>
+            {{!-- <a class="btn btn-primary" target="__blank" href="/">Back</a> --}}
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"
+></script>
+<script src="/public/js/signup.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"
+></script>

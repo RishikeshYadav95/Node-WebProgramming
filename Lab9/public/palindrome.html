@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Check</title>
+   <link rel='stylesheet' href='/public/css/main.css'/>
+</head>
+    <body>
+        <header>
+        <h1>Palindrome Checker</h1>
+        </header>
+        <h4>This page will tell you if the phrase you have entered is a palindrome or not</h4>
+        <p class ="blue">(blue - palindrome)</p>
+        <p class="red">(red - not a palindrome)</p>
+        <p></p>
+        <div id="error" class="error" hidden>I'm an error</div>
+        <br>
+        <form id="myForm">
+            <label id="formLabel">
+                Enter Phrase:
+                <input type="text" name="phrase" id ="phrase"/>
+                <button type="submit">Check</button>
+            </label>
+        </form>
+        <ol id="attempts">Attempts-</ol>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+        <script src='/public/scripts/script_jq.js'></script>
+        <footer id="footer">Rishikesh Yadav - [CWID: 20007668] - Lab 9 - Palindromes</footer>
+    </body>
+</html>

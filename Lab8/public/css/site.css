@@ -1,0 +1,62 @@
+.image{
+    max-height: 400px;
+    max-width: 400px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+h1,
+h2{
+	color: rgb(41, 29, 109);
+	margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+h1 {
+	font-size: 2.2rem;
+}
+
+h2 {
+	font-size: 1.65rem;
+}
+
+p {
+	font-size: 1.30rem;
+	line-height: 1.5rem;
+}
+.character-description{
+    line-height: 2.1rem;
+}
+
+li {
+    font-size: 1.30rem;
+}
+
+label {
+	font-weight: bold;
+}
+.searchTerm{
+    line-height: 1.6rem;
+    font-size: 1.25rem;
+}
+.search-button{
+    height: 2.0rem;
+}
+
+a{
+    font-size: 1.30rem;
+    line-height: 1.70rem;
+}
+
+.error, .error-code, .not-found{
+    font-size: 1.60rem;
+    line-height: 1.30rem;
+}
+
+.error-code{
+    color: rgba(255, 0, 0, 0.952);
+}
+
+#search-term{
+    margin-top: 25px;
+}

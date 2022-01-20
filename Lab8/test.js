@@ -1,0 +1,1 @@
+const marvel = require('./data/search');

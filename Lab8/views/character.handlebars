@@ -1,0 +1,16 @@
+<title>{{title}}</title>
+<main>
+    <div>
+        <h1>{{title}}</h1>
+        <img class = "image" alt={{title}} src='{{character.thumbnail.path}}.{{character.thumbnail.extension}}'>
+        <p class="character-description">{{character.description}}</p>
+        <h2>Comics</h2>
+        {{#if character.comics.items.length}}            
+            <ul class="comic-list">
+                {{#each character.comics.items}}
+                    <li>{{this.name}}</li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </div>
+</main>

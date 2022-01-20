@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+<h2 id="searchCharacter"> Search Term - {{searchCharacter}}</h2>
+<main>
+    <a id="anothersearch" href="/">Make another search</a>
+    {{#if searchResult.length}}
+    <ul class="searchlist"> 
+        {{#each searchResult}}
+          <li><a href="/characters/{{this.id}}">{{this.name}}</a></li>
+        {{/each}}
+    </ul>
+    {{else}}
+      <p class="notfound">No results found for {{searchCharacter}}.</p>
+    {{/if}}
+</main>

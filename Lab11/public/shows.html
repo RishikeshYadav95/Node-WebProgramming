@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Finder</title>
+   <link rel='stylesheet' href='/public/css/main.css'/>
+</head>
+    <body>
+        <header>
+        <h1>Show Finder</h1>
+        </header>
+        <p></p>
+        <div id="error" name="error" class="error" hidden></div>
+        <br>
+        <form id="searchForm">
+            <label id="formLabel" for="search_term">
+                Enter Search Phrase:
+                <input type="text" name="search_term" id ="search_term"/>
+                <button type="submit">Search</button>
+            </label>
+        </form>
+        <ul class="showList" id="showList" hidden></ul>
+        <div id="show" hidden></div>
+        <a id="homeLink" href="/" hidden>Back to All Shows</a>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+        <script src='/public/scripts/script_jq.js'></script>
+        <footer id="footer">Rishikesh Yadav - [CWID: 20007668] - Genius is knowing when to stop!</footer>
+    </body>
+</html>
